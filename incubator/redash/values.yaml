@@ -51,7 +51,7 @@ server:
     requests:
     #  cpu: 100m
       memory: 2Gi
-  
+
   ## Node labels for server pod assignment
   ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
