@@ -10,6 +10,11 @@ metadata:
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.scheduledWorker.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "redash.name" . }}
+      component: scheduledworker
+      release: {{ .Release.Name }}
   template:
     metadata:
       labels:
